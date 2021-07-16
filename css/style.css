@@ -1,17 +1,31 @@
+/* font imported  */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: white;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+/* Top Banner */
 .top-banner{
-    display: flex;
+    /* overflow: auto; */
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     justify-content: center;
     align-items: center;
     background-color: #2D25A0;
-    height: 677px
+    /* height: 677px; */
 }
 .tournament-image{
     /* margin-top: 153px;
     margin-right: 141px;
     margin-bottom: 86px; */
-    margin: 153px 141px 86px 0px;
+
+    /* margin: 153px 141px 86px 0px; */
     
 }
 .tournament-image img{
@@ -23,7 +37,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 64px;
     color: white;
-    margin: 165px 156px;
+    margin: 165px 140px;
     margin-bottom: 0;
 
 }
@@ -51,22 +65,17 @@
 .btn-text{
     padding:8px;
 }
+
 .fas{
     color: white;
 }
-*{
-    margin: 0;
-    padding: 0;
-}
-body{
-    background-color: white;
-    /* font-family: 'Poppins', sans-serif; */
-}
+/* Main Part */
 main{
     width: 1050px;
     max-width: 90%;
     margin: 0 auto;
 }
+
 section{
     background-color: white;
     padding: 1em;
@@ -76,12 +85,16 @@ section{
 .section-title{
     color: violet;
 }
+
+/* Player Section */
+
 .top-players{
     display: grid;
     grid-gap:30px;
     margin-top: 20px;
     place-items: center;
 }
+
 .top-players{
     grid-template-columns: repeat(3, 1fr);
 }
@@ -116,6 +129,8 @@ section{
     font-weight: 100;
 }
 
+/* News Section */
+
 .headlines{
     display: grid;
     grid-template-columns: repeat(1,1fr);
@@ -137,6 +152,9 @@ section{
    .news-right{
        text-align: end;
    }
+
+/* Score-Board Section */
+
 .scoreboard{
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
@@ -153,6 +171,9 @@ section{
     font-weight: 700;
     text-align: center;
 }
+
+/* Logo */
+
 .logo{
     display: grid;
     grid-template-columns: repeat(1, fr);
@@ -165,6 +186,7 @@ section{
     margin-right: auto;
 }
 
+/* Social Media */
   .social-media{
       margin-left: 156px;
   }
@@ -174,6 +196,9 @@ section{
     width: 32px;
     text-decoration: none;
   }
+
+  /* Copyright Section */
+
   .copyright{
     font-family: Poppins;
     font-style: normal;
@@ -181,13 +206,25 @@ section{
     font-size: 18px;
     margin:20px 0 63px 180px  ;
   }
+
+/* Media Queries for Responsiveness */
+
 @media (max-width:992px){
-    .top-players{
+    .top-players {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .top-banner{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 @media (max-width:668px){
+    .top-banner{
+        grid-template-columns: repeat(1, 1fr);
+    }
     .top-players{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .scoreboard{
         grid-template-columns: repeat(1, 1fr);
     }
 }
